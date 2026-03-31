@@ -9,13 +9,15 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{harvard}
+\usepackage{setspace}
 \DeclareMathOperator{\Var}{Var}
 \DeclareMathOperator{\Cov}{Cov}
 \DeclareMathOperator{\E}{\mathbb{E}}
 
-\title{Referee Report: Who Benefits from Payroll Tax Cuts? Market Power, Tax Incidience, and Efficiency}
+\title{Referee Report: Who Benefits from Payroll Tax Cuts? Market Power, Tax Incidence, and Efficiency}
 \author{Jacob Herbstman}
 \date{\today}
+\doublespacing
 
 \begin{document}
 
@@ -34,18 +36,54 @@ a mapping between the reduced form estimates and the structural parameters of th
 He concludes that the incidence of the payroll tax burden in Brazil primarily falls on consumers at $65\%$ through higher prices, 
 with $23\%$ falling on firm owners through lower profits and the remaining $12\%$ falling on workers through lower wages. 
 
+Overall, this is a fantastic paper. The magnitude of the policy change is enormous and is clearly relevant to debates about corporate taxation schemes and impacts more broadly. In addition, the data and identification strategy are top-notch. 
+The model, while parsimonious, is elegant and gets at the key mechanisms at play without substantial bloat. The calibration and incidence calculations are important and informative, although they could use some fine-tuning and robustness checks.
+Overall, this paper seems well-suited for publication in the American Economic Review, and I only have one critical, major comment and several minor comments I would like to see addressed before publication.
 
 
 \section*{Major Comments}
 
 \begin{enumerate}
-    \item
+    \item My biggest, most major concern is the consumer incidence calculation. The calculation for one of the main findings of the paper, consumer incidence, is based on the following formula: 
+    \[
+    \begin{aligned}
+    dC &= \frac{B}{s_L} \frac{\beta_R}{\eta - 1}
+    \end{aligned}
+    \]
+    This formula crucially depends on the elasticity of output demand $\eta$, given by the following equation: 
+    \[
+    \begin{aligned}
+    \eta &= \frac{\sigma \beta_R - \beta_K}{\beta_R - \beta_K}
+    \end{aligned}
+    \]
+    This estimate relies on the empirical estimates of revenues and capital ($\beta_R$ and $\beta_K$), neither of which are precisely estimated in table 1. 
+    If it happened to be that the true estimate of $\beta_R$ was on the low end of the confidence interval ($\approx 0$) and 
+    capital were to be on the higher end of its confidence interval (also closer to zero from its point estimate of $-.0337$), then one can pretty easily get a combination of these 
+    parameters that yields $\eta < 1$. This would imply that these firms, which have market power according to the model, are operating in the inelastic portion of their demand curve, which should never happen in equilibrium.
+
+    Some back of the envelope calculations using a monte carlo simulation (with the help of claude) suggest that the consumer incidence could range from about $40-85\%$, which is a substantial range. 
+    While I think the qualitative conclusion that consumers bear a large share, and most likely the majority, of the payroll tax burden is likely, it would be nice if the author acknowledged some of the uncertainty in these model parameters and 
+    provided some sensitivity analysis to give us a more formal set of bounds on the consumer incidence calculation.
+ 
 \end{enumerate}
 
 \section*{Minor Comments}
 
 \begin{enumerate}
-    \item
+    \item I am confused why the author imports cost shares from (Curtis 2021) instead of simply computing them from the author's own data. 
+    It appears as though the author has enough information from the firm-level tax return data to compute the labor and capital shares for the firms in the sample in the pre-period as a baseline, 
+    without interference from the payroll tax reform. 
+    \item Race in Brazil is measured poorly and is much more fluid than in the US. 
+    Brazilians tend to self-identify based off of physical appearance much more than their family background, 
+    and almost $20\%$ of Brazilian families have siblings who identify as different races. In addition, $45\%$ of the population identifies as "pardo", 
+    which is for those who are brown or mixed. But many pardo individuals identify as white, which makes the racial categories in Brazil much less informative than in the US, for example. 
+    I think the author should remove the section about racial gaps in policy effects from the paper given the noise in that variable.
+    \item The winsorization in profit levels is pretty aggressive at the 5th and 95th percentiles. I would be curious if the results change substantially if the author winsorizes at the 1st and 99th percentiles instead, or at least 
+    provides some justification for why the 5th and 95th percentiles were chosen as the cutoffs. I would like to see what the profit levels at the 5th and 95th percentiles are as well to see if they really seem like outliers. 
+    \item The author argues that the consistency between firm-level and worker-level earnings estimates (both around 3\%) is evidence against compositional changes driving the results. 
+    However, the worker-level sample restricts to workers who held formal employment at the same firm for at least 3 years before the reform. This mechanically excludes any workers who were recently formalized which is the margin that would be affected if the employment increase were partly driven by within-firm transitions from informal to formal status. The consistency between firm and worker estimates therefore cannot speak to whether formalization is occurring. 
+    Separately, Figure H.3 shows that the share of new hires coming from non-employment or informality is stable across treatment status, which is informative, 
+    but I would like to see the levels as well, since the total number of hires is increasing with the 12\% employment effect. 
 \end{enumerate}
 
 \end{document}
