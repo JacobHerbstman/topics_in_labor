@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage[utf8]{inputenc}
+\usepackage{dsfont}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{harvard}
+\usepackage{setspace}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\E}{\mathbb{E}}
+
+\title{Referee Report 1: Letter to Editor}
+\author{Jacob Herbstman}
+\date{\today}
+\onehalfspacing
+
+\begin{document}
+
+\maketitle
+
+Dear Editor, 
+
+\vspace{0.5cm}
+
+Thank you for the opportunity to review ``Who Benefits from Payroll Tax Cuts? Market Power, Tax Incidence, and Efficiency''.
+
+This paper analyzes a major 20 p.p. payroll tax cut in Brazil, using employer-employee matched data along with anonymized firm-level tax return microdata. 
+The author finds large increases in employment and smaller effects on earnings, along with increases in revenues and profits and a drop in capital. 
+The author then writes down a model to quantify the incidence of the payroll tax and finds that the majority of the burden falls on consumers through higher prices, with smaller shares falling on firm owners and workers.
+
+I think this is a fantastic paper that is well-suited for publication in the American Economic Review conditional on addressing some medium-level concerns I have. 
+In particular, I have some concerns about the consumer incidence calculation, which is one of the headline findings of the paper. 
+The calculation is based on the elasticity of output demand, which is estimated using the revenue and capital estimates from the paper.
+Neither of these estimates are statistically significant, and the confidence intervals are quite wide. 
+As a result, this calculation is quite noisy and could be very different if the true values of these parameters are on the low or high end of the confidence intervals.
+In particular, some quick monte carlo simulation suggest that feasible combinations of the coefficient estimates could lead to output demand elasticities below 1, 
+which is an implausible part of the demand curve for a firm with market power to operate on and would make the model internally inconsistent.
+I would like to see a range of consumer incidence estimates based on the confidence intervals of the revenue and capital estimates and more acknowledgment of the noisiness of the headline incidence numbers. 
+
+Besides this major concern, I left several minor comments concerning firm cost share calculations, the racial gap analysis, the firm profit winsorization procedure, 
+and the evidence on formalization and compositional changes in the labor market effects. None of these are large enough to hinder publication but would be nice to see addressed. 
+
+Thank you again for the opportunity to review this paper. It is important, well-executed, and makes a meaningful contribution to the literature on tax incidence and the effects of firm-level tax policy design more broadly. 
+With some moderate revisions, I think this paper would be a great fit for the AER. Feel free to contact me with any outstanding questions, 
+and I look forward to reviewing the revised version of the paper.
+
+\vspace{0.5cm}
+Best, 
+
+Jacob Herbstman
+
+\end{document}
