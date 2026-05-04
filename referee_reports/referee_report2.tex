@@ -25,97 +25,121 @@
 
 \section*{Summary}
 
-This paper analyzes how AI agents, introduced through the coding platform Cursor, change 
-the tasks that workers perform and the output levels of the firms who use them, and also 
-examines heterogeneity by worker experience and ``task-verifiability'' to see which types of workers and work 
-are being changed the most by the rise of the AI agent. 
+This paper analyzes how AI agents, introduced through the coding platform Cursor, change the tasks that workers perform and the output levels of the firms who use them, and also examines heterogeneity by worker experience and ``task-verifiability'' to see which types of workers and work are being changed the most by the rise of the AI agent.
 
 The paper starts with a brief conceptual outline, as the author argues that agents differ from prior AI tools because they shift AI from a support tool to a delegation tool.
 
-The author then moves into empirical analysis. 
-The first main set of results has to do with worker experience  and task-verifiability heterogeneity. 
-More experienced workers make plans more in their initial message, and ask less direct questions. This indicates potentially more initial familiarity with the existing codebase, 
-and being more capable at generating specific, detailed agent prompts. 
+The author then moves into empirical analysis.
+The first main set of results has to do with worker experience and task-verifiability heterogeneity.
+More experienced workers make plans more in their initial message, and ask fewer direct questions.
+This indicates potentially more initial familiarity with the existing codebase, and being more capable at generating specific, detailed agent prompts.
 UI and Styling and API Integration tasks are classified as easier to verify than Architecture and DevOps and Deployment tasks, and the author finds that workers in roles and sectors whose task mix skews toward the easier-to-verify categories use agents more intensively.
-The author also splits the eligible group at medians of engineer share and average experience, and finds the output increase is larger in firms with below-median engineer shares (50\% vs. 30\% for high-engineer-share firms) and above-median average experience (52\% vs. 23\% for less-experienced firms).
+The author also splits the eligible group at medians of engineer share and average experience, and finds the output increase is larger in firms with below-median engineer shares (50\% vs.\ 30\% for high-engineer-share firms) and above-median average experience (52\% vs.\ 23\% for less-experienced firms).
 
-The author then uses  a difference-in-differences analysis of early vs. later adopting firms (firms who adopted Cursor after the sample period), and finds that merges into the main codebase increase
-by 39\%  and lines edited increased by 49\% for early adopters, with no detectable change in revert rates and a decrease in bugfix rates. 
+The author then uses a difference-in-differences analysis comparing firms that were already using Cursor to firms that adopted Cursor after the analysis period, and finds that merges into the main codebase increase by 39\% and lines edited increase by 49\% for the eligible firms, with no detectable change in revert rates and a decrease in bugfix rates.
 
-Finally, the author runs cross-sectional regressions of outcomes on agent usage frequency at a single firm (Company 1), and finds that higher usage is associated with more merges and more lines edited, with no significant association with rollback rate. 
-
+Finally, the author runs cross-sectional regressions of outcomes on agent usage frequency at a single firm (Company 1), and finds that higher usage is associated with more merges and more lines edited, with no significant association with rollback rate.
 
 Overall, this is a very interesting paper on a crucial topic, but it has some major flaws that prevent me from recommending it for publication in the AER in its current form.
-The question is obviously very important in the modern age, and the data from Cursor is unique and rich, and allows us to 
-make progress on a question that is not answerable from more traditional data sources at the moment. 
-However, the main normative implications the author seems to want me to take away from this paper are that AI agents
-increase output without a corresponding loss of quality. 
-I do not find that argument convincing, as the longer-run concerns of technical debt buildup and increased code complexity are as if not more important 
-than short run measures of bug fixes and revert rates. 
-The paper itself cites He et al. (2025), which finds that AI-assisted coding produces transient output gains alongside long-run increases in code complexity, and Shen and Tamkin (2026), which finds reduced conceptual understanding among AI users. 
-The 15-week post-full-release window in this paper is precisely the horizon at which He et al.'s 'transient' gains appear, before the long-run quality concerns materialize. 
+The question is obviously very important in the modern age, and the data from Cursor are unique and rich, and allow us to make progress on a question that is not answerable from more traditional data sources at the moment.
+However, the main productivity interpretation the author seems to want me to take away from this paper is that AI agents increase output without a corresponding loss of quality.
+I do not find that argument convincing, as the longer-run concerns of technical debt buildup, increased code complexity, maintainability, and reduced developer understanding are at least as important as short-run measures of bug fixes and revert rates.
+The paper itself cites He et al.\ (2025), which finds that Cursor adoption produces velocity gains that dissipate within two months alongside a persistent 41\% increase in code complexity, and Shen and Tamkin (2026), which finds that AI users score 17\% lower on comprehension assessments than developers coding by hand.
+The 15-week post-full-release window in this paper is precisely the kind of horizon over which He et al.'s gains appear before dissipating, and during which Shen and Tamkin's skill costs have not yet had time to manifest.
+
 Given this, I do not think the existing data can support the strong productivity interpretation the paper offers.
-To resolve this concern, the author would have to substantially soften the productivity claims and evidence in the paper, which I think would make the paper 
-too narrow for the AER. 
-Alternatively, given that the paper was written in May 2026 and the agent's full release was February 2025, substantially more post-release data should now be available than the 15-week window currently used. 
-A revision incorporating this longer horizon, with explicit measurement of code complexity and quality outcomes over time, would be a very different paper but one I would be considerably more amenable to accepting in the AER.
+To resolve this concern, the author would have to substantially soften the productivity claims and interpretation in the paper, which I think would make the paper too narrow for the AER.
+Alternatively, given that the paper was written in May 2026 and the agent's full release was in February 2025, substantially more post-release data should now be available than the 15-week window currently used.
+A revision incorporating this longer horizon, with explicit measurement of code complexity, maintainability, technical debt, and developer understanding over time, would be a very different paper but one I would be considerably more amenable to accepting in the AER.
+As a result, I am recommending a \textit{reject and resubmit} for this manuscript.
 
 
 \section*{Major Comments}
 
-The first major comment is on a similar note to the above paragraph, which is that the normative takeaway of the paper is not in line
-with the rest of the literature, and the post-adoption window in the data is too short to speak to the long-run effects of AI agents that would 
-satisfactorily answer the question the author wants to. 
+The first major comment is on a similar note to the above paragraph, which is that the paper's main productivity interpretation is not fully in line with what the data can actually establish, and the post-full-release window in the data is too short to speak to the long-run effects of AI agents that would satisfactorily answer the question the author wants to answer.
 
-The paper treats the merge and lines editied increases as productivity gains that are not offset by quality losses, 
-which comes from the null result on code reversions and lower bugfix rates.
-However, the paper itself cites He et al. (2025) and Shen and Tamkin (2026), both of which 
-find that initial productivity gains from AI-assisted coding are not sustained and result 
-in long-run code complexity increases and reduced programmer understanding.
-While the settings are slightly different (open-source github repos and developers in an RCT) both suggest that 
-the 15-week post-release window in this paper is precisely the horizon at which the 'transient' gains appear, before the long-run quality concerns materialize.
-The paper claims to find results that are consistent with increased productivity without quality losses, and I think those claims would have to be substantially softened to be convincing, which would narrow the paper enough to make it less suitable for the AER.
-Alternatively, the author could go get more data from Cursor and do a more serious analysis of the long-run evolution of code base complexity and code quality over the next year or two, which would be a very different paper but one I would be much more amenable to accepting in the AER.
+The paper uses the merge and lines-edited increases as evidence of higher output, and interprets the null result on code reversions and the decline in bugfix rates as evidence consistent with no short-run quality loss.
+These are useful metrics, but they do not establish durable software productivity.
+In software production, higher short-run throughput and higher productivity are not the same thing.
+Agent-generated code could increase the number of merged changes while also increasing technical debt, weakening maintainability, making the codebase harder for future developers to understand, or shifting costs into future debugging and integration work.
+These are not second-order quality issues; they are central to whether the observed increase in code output is economically valuable.
 
-Beyond the normative claim critique central to my recommendation, I have a few other major comments.
+This concern is especially important because the paper itself cites two studies that point directly at the long-run costs the current design cannot measure.
+He et al.\ (2025) study Cursor adoption in open-source projects and find that velocity gains dissipate within two months while static analysis warnings rise by 30\% and code complexity rises by 41\%, with panel GMM estimates showing that the accumulated technical debt subsequently reduces future velocity.
+Shen and Tamkin (2026) run a randomized experiment with developers and find that AI users score 17\% lower on comprehension assessments and exhibit impaired code reading and debugging abilities.
+The settings differ from the current paper, since He et al.\ study open-source repositories and Shen and Tamkin study skill formation in a controlled experiment, but both papers identify exactly the kinds of long-run costs that the 15-week window in this paper cannot detect.
+The current paper's window is precisely the horizon over which He et al.'s gains appear before dissipating, and during which Shen and Tamkin's skill costs have not yet had time to manifest.
+The paper claims to find results that are consistent with increased productivity without quality losses, and given the cited evidence, I think those claims would have to be substantially softened to be convincing.
 
-First, the control group is very small at 8 firms, and these are firms that still adopt Cursor relatively early. 
-I am not convinced that this entire sample of firms is not unobservably different from the early adopters in ways that would affect the outcomes of interest, even though some of 
-the observable characteristics are similar. In particular, the revert rate differences in the pre-period are quite large and to me suggest a deeper layer of unobservable differences between the early and late adopters.
-The wild bootstrap inference technique is also not very reliable with only 8 control clusters and I am not sure how reliable inference is in this setting.
+One way to address this would be for the author to go get more data from Cursor and do a more serious analysis of the long-run evolution of codebase complexity and code quality over the next year or two.
+Useful outcomes would include later bugfixes and reverts linked to code written during the agent period, code churn, review comments, test failures, deployment failures, production incidents, static code complexity measures, maintainability metrics, or some measure of whether developers understand the code they are merging.
+That would be a very different paper, but one I would be much more amenable to accepting in the AER.
+Without this type of evidence, I think the current paper is best read as strong evidence on adoption, usage, and short-run code throughput, rather than decisive evidence on productivity.
+
+Beyond the productivity interpretation critique central to my recommendation, I have a few other major comments.
+
+First, the control group is very small at 8 firms, and these are still firms that adopt Cursor relatively early after the analysis period.
+I am not convinced that this entire sample of firms is not unobservably different from the eligible firms in ways that would affect the outcomes of interest, even though some of the observable characteristics are similar.
+In particular, the pre-period revert rate difference is noticeable and to me suggests the possibility of deeper unobservable differences between the eligible and baseline firms.
+This does not invalidate the design, but it does make the counterfactual less convincing for an AER-level productivity claim.
+
+The inference is also difficult in this setting.
+With only 24 eligible firms and 8 baseline firms, even wild bootstrap inference may be fragile.
+I would like to see more evidence on how robust the estimates are to small-sample issues.
+Leave-one-firm-out estimates, randomization inference, permutation tests, and event-study plots with firm-level outcomes would be helpful.
+I would also like the author to show whether the results are driven by a few large firms or unusually high-growth firms.
 As with my first major comment, I unfortunately see the best path to addressing this concern as getting additional data from Cursor on later adopters, not something that can be easily resolved within the current dataset.
-Additionally, it would be helpful to understand more clearly how the merge data for the baseline firms was constructed. 
-This was presumably done through some Cursor analytics feature that backfills git history upon onboarding, but the paper does not make this explicit, and the consistency of revert/bugfix labeling across firms that joined at different times is not addressed.
 
-The other major comment I have is how the paper frames ``expertise'' and uses experience as a proxy for it. 
-The framework in Section 1 defines $e_i$ as a structural object encompassing specification skill, evaluation skill, and domain knowledge. 
-But the empirical proxy of years of work experience captures these factors plus codebase familiarity, organizational tenure, task assignment patterns, and selection effects on who remains in software engineering for 20+ years. 
-The author frames the experience gradient reversal from autocomplete to agents as evidence of capital-skill complementarity and rising returns to expertise, but this interpretation rests on the assumption that years of experience cleanly identifies the structural object in the framework, which the data do not establish. 
-The author tries to address this by looking at task mix scores across experience levels, but the measurement of these task groups is quite coarse and there could be plenty of within-group heterogeneity there. 
-I think the best way to address this would be through more rigorous text-analysis of the actual prompts and follow-up messages from workers to gain a better understanding of specific task content, which would help distinguish whether experienced workers genuinely produce better specifications or whether the gradient reflects other experience-correlated factors.
+Additionally, it would be helpful to understand more clearly how the merge data for the baseline firms was constructed.
+The paper says the data are historical, comprehensive, not restricted to merges made through Cursor, and backfilled across the sample period.
+That is useful, but I would like more detail on the mechanics of that backfilling process and the consistency of revert and bugfix labeling across firms that joined Cursor at different times.
+Since these quality proxies are central to the productivity interpretation, the paper should explain why the labels are comparable across the eligible and baseline firms.
+
+The other major comment I have is how the paper frames ``expertise'' and uses experience as a proxy for it.
+The framework in Section 1 defines $e_i$ as a structural object encompassing specification skill, evaluation skill, and domain knowledge.
+But the empirical proxy of years of work experience captures these factors plus codebase familiarity, organizational tenure, task assignment patterns, role hierarchy, and selection effects on who remains in software engineering for 20 or more years.
+The author frames the experience gradient reversal from autocomplete to agents as evidence of capital-skill complementarity and rising returns to expertise, but this interpretation requires years of experience to be informative about the structural notion of expertise in the framework.
+The data do not separately identify the different components of expertise that the model emphasizes.
+
+The author tries to address this by looking at task mix scores across experience levels, but the measurement of these task groups is still quite coarse and there could be plenty of within-group heterogeneity there.
+I think the best way to address this would be through more rigorous text analysis of the actual prompts and follow-up messages from workers to gain a better understanding of specific task content.
+This would help distinguish whether experienced workers genuinely produce better specifications, or whether the gradient reflects other experience-correlated factors, such as working on more modular tasks, having more codebase familiarity, being more willing to accept generated code, or being assigned to different projects.
+The author could also strengthen the interpretation by showing whether accepted agent output from experienced workers survives review and deployment better, generates fewer follow-up fixes, or receives fewer review comments.
 
 
 \section*{Minor Comments}
 
-In addition, I have a few minor comments on the paper that would be helpful to address. 
+In addition, I have a few minor comments on the paper that would be helpful to address.
 
-First, the definition of ``easier to verify'' tasks is somewhat circular, as it comes from Cursor designations themselves, which means it comes from tasks that are already using Cursor. 
-A check of this result using an external classification of task verifiability (such as from O*NET) would give me more confidence in this result.
+First, the definition of ``easier to verify'' tasks is somewhat proxy-based and partly endogenous to observed Cursor usage, since the task categories come from conversations among users already using the platform.
+I do not think this is fatal, but I would be more convinced by an external or human-coded validation of the task-verifiability measure.
+O*NET may be one possible source, although it may be too coarse for software task types.
+Another useful check would be to have independent human annotators classify a sample of tasks or prompts by verifiability, and then compare those classifications to the paper's UI/API versus architecture/devops distinction.
 
-I also don't find the Company 1 cross-sectional analysis very convincing, as I would have preferred to see a panel version with developer fixed effects.
-Right now, this should be suggestive evidence relegated to an appendix, rather than a result in the main paper.
+I also don't find the Company 1 cross-sectional analysis very convincing as causal evidence, as I would have preferred to see a panel version with developer fixed effects.
+Right now, this should be presented as suggestive worker-level evidence rather than as a central result in the main paper.
+The author is clear that this analysis is not based on a natural experiment, but I still think it should either be deemphasized or moved to the appendix unless the author can add within-developer variation.
 
-I also don't find the conceptual outline at the start of the paper to be very useful, as the empirical results never really connect back to the theory in the paper.
+I also think the conceptual outline at the start of the paper is not fully connected to the empirical objects later in the paper.
+The framework is useful for organizing the predictions, but the empirical mapping from $v_j$ to the task-verifiability score and from $e_i$ to years of work experience is not developed enough.
+I would either connect the empirical results back more explicitly to the theory in the text, especially explaining how the proxies map onto the model primitives, or remove the brief model outline and verbally describe what is driving the empirical predictions.
 
-I would either connect the empirical results back more explicitly in the text or remove the brief model outline and just verbally describe what is driving the empirical predictions. 
-
-The 23\% decline in bugfix rates post-full-release is interpreted as evidence of preserved quality, but the interpretation is one-sided. 
-A falling bugfix share could reflect fewer bugs (positive), a compositional shift away from maintenance toward feature work (neutral or negative), or harder-to-attribute bugs in agent-generated code (negative). 
+The 23\% decline in bugfix rates post-full-release is interpreted as evidence consistent with preserved quality, but the interpretation is one-sided.
+A falling bugfix share could reflect fewer bugs (positive), a compositional shift away from maintenance toward feature work (neutral or negative), or bugs in agent-generated code that are harder to attribute in the short run (negative).
 The author should at minimum acknowledge this ambiguity.
+It would also be useful to report bugfix counts as well as bugfix shares, since a decline in the share of bugfix merges is harder to interpret when total merges are rising by 39\%.
 
-Lastly, I think winsorizing at just the 1 percent level for lines edited is sort of conservative since the distribution is heavily right skewed. 
-I would prefer to see this winsorized at the 5 percent level as well.
+The claim that as many as 43\% of users may not be coding manually should be softened.
+Since autocomplete is triggered by manual code edits, the non-use of autocomplete is suggestive, but it does not necessarily mean the user is no longer manually coding.
+Users may disable autocomplete, use another editor, manually edit in ways not captured by the measure, or use Cursor for non-code tasks.
+The statement is fine as an upper bound, but the text should be careful not to overinterpret it as direct evidence that nearly half of users no longer type code manually.
 
+The classifier-based variables could use more validation.
+Role, seniority, years of experience, message intent, and task categories are all classifier-generated.
+Since these variables are central to the expertise and verifiability results, I would like to see a human-labeled benchmark sample, confusion matrices, or robustness checks showing that classification error is not systematically related to role, seniority, or firm type.
 
+Lastly, I would like to see robustness to alternative winsorization thresholds for lines edited.
+The distribution is heavily right-skewed, and extreme observations may either be outliers or real large refactors.
+I would not necessarily say that the 1\% threshold is wrong, but I would prefer to see the results under multiple thresholds, such as 0.5\%, 1\%, and 5\%, along with some discussion of whether the main estimates are sensitive to the treatment of the upper tail.
 
 \end{document}

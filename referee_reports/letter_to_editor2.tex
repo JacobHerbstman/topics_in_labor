@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage[utf8]{inputenc}
+\usepackage{dsfont}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{harvard}
+\usepackage{setspace}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\E}{\mathbb{E}}
+
+\title{Referee Report 2: Letter to Editor}
+\author{Jacob Herbstman}
+\date{\today}
+\onehalfspacing
+
+\begin{document}
+
+\maketitle
+
+Dear Editor,
+
+\vspace{0.5cm}
+
+Thank you for the opportunity to review ``AI Agents and Higher-Order Work''.
+
+This paper studies the rollout of AI coding agents on the Cursor platform across firms and analyzes the coding agents' effects on productivity and quality, while also documenting a notable experience gradient in how workers use the platform.
+The author argues that agents shift AI from a support tool to a delegation tool, and provides empirical evidence that more experienced workers use agents to plan more frequently from the start and accept agent output at higher rates.
+Using a difference-in-differences design comparing firms already using Cursor to firms that adopted Cursor after the analysis period, the author finds large increases in merges and lines edited (proxies for output) and no detectable decreases in short-run quality metrics such as bug fixes and code reversions.
+The author concludes that agents enable higher-order work and that returns to expertise rise as knowledge work becomes more abstract.
+
+This paper tackles a general-interest question well-suited in scope for the AER, and the data from Cursor are unique and rich.
+However, the paper's productivity interpretation is not fully supported by the available evidence.
+The author, through no fault of his own, only has 15 weeks of data after the agent's full release, and uses this evidence to imply a ``free lunch'' of productivity gains without quality decreases.
+The available quality measures are short-run and do not capture technical debt, maintainability, code complexity, or developer understanding.
+These omissions are first order in software production, since agent-generated code could increase short-run throughput while shifting costs into future debugging, integration, or comprehension work.
+This concern is reinforced by the paper's own citations: He et al.\ (2025) finds that Cursor adoption produces velocity gains that dissipate within two months alongside a persistent 41\% increase in code complexity, and Shen and Tamkin (2026) finds that AI users score 17\% lower on comprehension assessments than developers coding by hand.
+The 15-week window in this paper is precisely the horizon over which He et al.'s gains appear before dissipating, and during which Shen and Tamkin's skill costs have not yet had time to manifest.
+
+To properly address this concern, the author would have to substantially soften the productivity claims, which I think would narrow the contribution sufficiently that it is no longer general-interest enough for the AER.
+The alternative is for the author to obtain more data from Cursor on longer-run outcomes related to codebase quality, technical debt, maintainability, and developer understanding, now that the agent has been available for over a year.
+As a result, I am recommending a \textit{reject and resubmit}, with the understanding that the journal would reconsider a substantially revised version that incorporates longer-run evidence on the core question.
+
+Beyond this central concern, my report details two additional major issues that would need addressing in any resubmission: the small control group of 8 baseline firms, which raises concerns about the credibility of the counterfactual given the small number of clusters and noticeable pre-period imbalance in one quality proxy, and the paper's use of years of experience as the empirical proxy for the structural notion of expertise in the framework, which I think does not separately identify the components of expertise the model emphasizes.
+
+Thank you again for the opportunity to review this paper.
+If the author does make substantial changes along the lines described, I would be happy to review a heavily revised version.
+
+\vspace{0.5cm}
+
+Best,
+
+Jacob Herbstman
+
+\end{document}
